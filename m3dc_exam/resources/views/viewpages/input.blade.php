@@ -49,8 +49,8 @@
 									<div class="form-group">
 										<label class="col-md-2 control-label">ご芳名</label>
 										<div class="col-md-4">
-											<input type="text" name="lastname" placeholder="姓" class="form-control">
-											<input type="text" name="firstname" placeholder="名" class="form-control">
+											<input type="text" name="lname" placeholder="姓" class="form-control">
+											<input type="text" name="fname" placeholder="名" class="form-control">
 										</div>
 									</div>
 

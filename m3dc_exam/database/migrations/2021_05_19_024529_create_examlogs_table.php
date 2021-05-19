@@ -16,6 +16,7 @@ class CreateExamlogsTable extends Migration
         Schema::create('exam_log', function (Blueprint $table) {
             $table->increments('id');
             $table->date("crnt_date");
+            $table->string("todohuken");
             $table->string("fname");
             $table->string("lname");
             $table->integer("viewcnt");
