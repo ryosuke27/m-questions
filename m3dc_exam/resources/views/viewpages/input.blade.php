@@ -46,6 +46,20 @@
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="col-md-2 control-label">ご芳名</label>
+										<div class="col-md-4">
+											<input type="text" name="lastname" placeholder="姓" class="form-control">
+											<input type="text" name="firstname" placeholder="名" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-md-2 control-label">参加人数</label>
+										<div class="col-md-4">
+											<input type="number" name="participant" class="form-control">
+										</div>
+									</div>
 
 									<div class="row">
 										<div class="btn-group btn-group-justified">
