@@ -44,7 +44,6 @@
 												<option value="msg" selected="selected" class="msg">都道府県</option>
 											</select>
 										</div>
-
 										@if ($errors->any())
 										<div class="alert alert-danger form-control">
 											<ul>
@@ -67,6 +66,7 @@
 										<div class="alert alert-danger form-control">
 											<ul>
 												@foreach ($errors->all() as $error)
+												<li>{{ $error }}</li>
 												<li>{{ $error }}</li>
 												@endforeach
 											</ul>
