@@ -35,8 +35,8 @@
 							<div class="panel-heading"></div>
 							<div class="panel-body">
 
-								<form id="nameForm" class="form-horizontal" role="form" method="post" action="">
-
+								<form class="form-horizontal" role="form" method="post" action="{{ route('store') }}">
+									{{ csrf_field() }}
 									<div class="form-group">
 										<label class="col-md-2 control-label">都道府県</label>
 										<div class="col-md-4">
@@ -44,6 +44,16 @@
 												<option value="msg" selected="selected" class="msg">都道府県</option>
 											</select>
 										</div>
+
+										@if ($errors->any())
+										<div class="alert alert-danger form-control">
+											<ul>
+												@foreach ($errors->all() as $error)
+												<li>{{ $error }}</li>
+												@endforeach
+											</ul>
+										</div>
+										@endif
 									</div>
 
 									<div class="form-group">
@@ -52,14 +62,34 @@
 											<input type="text" name="lname" placeholder="姓" class="form-control">
 											<input type="text" name="fname" placeholder="名" class="form-control">
 										</div>
+
+										@if ($errors->any())
+										<div class="alert alert-danger form-control">
+											<ul>
+												@foreach ($errors->all() as $error)
+												<li>{{ $error }}</li>
+												@endforeach
+											</ul>
+										</div>
+										@endif
 									</div>
 
 									<div class="form-group">
 										<label class="col-md-2 control-label">参加人数</label>
 										<div class="col-md-4">
-											<input type="number" name="participant" class="form-control">
+											<input type="number" name="viewcnt" class="form-control">
 										</div>
 									</div>
+
+									@if ($errors->any())
+									<div class="alert alert-danger form-control">
+										<ul>
+											@foreach ($errors->all() as $error)
+											<li>{{ $error }}</li>
+											@endforeach
+										</ul>
+									</div>
+									@endif
 
 									<div class="row">
 										<div class="btn-group btn-group-justified">

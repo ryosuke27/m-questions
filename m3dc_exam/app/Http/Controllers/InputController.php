@@ -15,4 +15,14 @@ class InputController extends Controller
     {
         return view('viewpages.viewpage');
     }
+
+    public function store(Request $request)
+    {
+        $validatedData = $this->validate($request, [
+            'todohuken' => 'required',
+            'lname' => 'required|max:50',
+            'fname' => 'required|max:50',
+            'viewcnt' => 'required|integer',
+        ]);
+    }
 }
