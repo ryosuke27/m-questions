@@ -13,9 +13,15 @@ class CreateExamlogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('examlogs', function (Blueprint $table) {
+        Schema::create('exam_log', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->date("crnt_date");
+            $table->string("fname");
+            $table->string("lname");
+            $table->integer("viewcnt");
+            $table->string("ip_addr");
+            $table->string("referer");
+            $table->string("usr_agent");
         });
     }
 
@@ -26,6 +32,6 @@ class CreateExamlogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('examlogs');
+        Schema::dropIfExists('exam_log');
     }
 }
