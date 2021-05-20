@@ -16,11 +16,11 @@
 								<div class="gaiyo">
 									<dl>
 										<dt>日程</dt>
-										<dd></dd>
+										<dd>{{ config('defaultcfg')['defaultcfg']['SEMI_INFO_DATE'] }}</dd>
 										<dt>演題</dt>
-										<dd></dd>
+										<dd>{{ config('defaultcfg')['defaultcfg']['SEMI_INFO_TITLE'] }}</dd>
 										<dt>演者</dt>
-										<dd></dd>
+										<dd>{{ config('defaultcfg')['defaultcfg']['SEMI_INFO_PROF'] }}</dd>
 									</dl>
 								</div>
 							</div>
