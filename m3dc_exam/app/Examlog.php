@@ -12,4 +12,5 @@ class Examlog extends Model
      * @var string
      */
     protected $table = 'exam_log';
+
 }
