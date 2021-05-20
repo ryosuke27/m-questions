@@ -33,7 +33,7 @@
             </div>
 
             <div class="col-sm-12 contactBox">
-                <a target="_blank" href="">接続に関する技術的な質問等ございましたら、こちらからお問い合わせ下さい。</a>
+                <a target="_blank" href="{{ config('defaultcfg')['defaultcfg']['INQUIRY_URL'] }}">接続に関する技術的な質問等ございましたら、こちらからお問い合わせ下さい。</a>
             </div>
         </div>
 
