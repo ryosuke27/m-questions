@@ -9,7 +9,6 @@
             <div class="panel panel-primary">
                 <div class="panel-heading text-center"></div>
                 <div class="panel-body">
-                    <pre class="list-unstyled">
                         <div class="gaiyo">
 							<dl>
                           		<dt>日程</dt>
@@ -19,13 +18,9 @@
 								<dt>演者</dt>
 								<dd>{{ config('defaultcfg')['defaultcfg']['SEMI_INFO_PROF'] }}</dd>
                				</dl>
-						</div>
-                    </pre>
-
-                    <div>
-                        <iframe src="/img/m3dc_logo.png"></iframe>
-                    </div>
-
+                        </div>
+                <div>
+                     <iframe src="/img/m3dc_logo.png"></iframe>
                 </div>
                 <div class="panel-footer">
                     <p class="glyphicon glyphicon-warning-sign text-danger">　PCでご視聴の場合はVPNを切断しご覧ください</p>
