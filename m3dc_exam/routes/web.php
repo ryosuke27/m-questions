@@ -11,4 +11,4 @@
 |
 */
 Route::get('/', 'InputController@index');
-Route::post('/', 'InputController@store')->name("store");
+Route::post('/', 'InputController@displayview')->name("displayview");

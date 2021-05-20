@@ -35,7 +35,7 @@
 							<div class="panel-heading"></div>
 							<div class="panel-body">
 
-								<form class="form-horizontal" role="form" method="post" action="{{ route('store') }}">
+								<form class="form-horizontal" role="form" method="post" action="{{ route('displayview') }}">
 									{{ csrf_field() }}
 									<div class="form-group">
 										<label class="col-md-2 control-label">都道府県</label>

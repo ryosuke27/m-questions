@@ -11,12 +11,7 @@ class InputController extends Controller
         return view('viewpages.input');
     }
     
-    public function displayview()
-    {
-        return view('viewpages.viewpage');
-    }
-
-    public function store(Request $request)
+    public function displayview(Request $request)
     {
         $validatedData = $this->validate($request, [
             'todohuken' => 'required',
@@ -24,5 +19,8 @@ class InputController extends Controller
             'fname' => 'required|max:50',
             'viewcnt' => 'required|integer',
         ]);
+
+        return view('viewpages.viewpage');
     }
+
 }
