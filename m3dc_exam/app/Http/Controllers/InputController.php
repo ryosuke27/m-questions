@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Examlog;
 
 class InputController extends Controller
 {
@@ -21,7 +22,7 @@ class InputController extends Controller
             'viewcnt' => 'required|integer',
         ]);
 
-        DB::table('exam_log')->insert([
+        $data = [
             'todohuken' => $request->todohuken,
             'lname' => $request->lname,
             'fname' => $request->fname,
@@ -29,8 +30,15 @@ class InputController extends Controller
             'ip_addr' => $request->ip(),
             'referer' => $request->header('referer'),
             'usr_agent' => $request->header('User-Agent'),
-        ]);
+        ];
 
+        //DBの保存
+        DB::table('exam_log')->insert($data);
+
+        //logファイルの出力
+        $result = Examlog::orderBy('crnt_date', 'desc')->first();
+        $path = storage_path() . "/logs/" . $result->crnt_date .".log";
+        file_put_contents($path, $result);
 
         return view('viewpages.viewpage');
     }
